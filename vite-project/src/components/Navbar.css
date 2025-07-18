@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Quicksand:wght@400;500&display=swap');
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent white */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 999;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.logo {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #d45a8e;
+}
+
+.nav-items {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: #5a4b4b;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-items li a:hover {
+  color: #d45a8e;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  background-color: #ffc7d9;
+  color: #4b2e2e;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #ffadc8;
+}
