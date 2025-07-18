@@ -10,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-
 const Hero = () => {
   const heroRef = useRef(null);
   const hero1Ref = useRef(null);
