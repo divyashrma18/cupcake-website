@@ -66,11 +66,6 @@
    
   }
   
-  /* .hero-right {
-    flex: 1;
-    text-align: right;
-  } */
-  
 
   .hero2{
     position: absolute;
@@ -96,7 +91,6 @@ width: 650px;
     padding: 100px 80px;
     height: 700px;
     background-color: #FEE8E5;
-    /* position: relative; */
 }
   
   .section1-text {
@@ -260,16 +254,14 @@ left: -80px;
     left: 70px;
   }
   
-  /* Flavor-specific pastel backgrounds */
   .cupcake-card.lemon {
-    background: #fffbe5; /* light lemon yellow */
+    background: #fffbe5; 
   }
   
   .cupcake-card.peach {
-    background: #ffece5; /* soft peach pink */
+    background: #ffece5; 
   }
   
   .cupcake-card.blueberry {
-    background: #f3edff; /* pastel lavender-blue */
-  }
+    background: #f3edff; }
   

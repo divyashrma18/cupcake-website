@@ -5,11 +5,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import lenis from '../utils/ lenis-init'
 gsap.registerPlugin(ScrollTrigger);
-
-
-
-
-
 const Hero = () => {
   const heroRef = useRef(null);
   const hero1Ref = useRef(null);
@@ -39,48 +34,6 @@ const Hero = () => {
         ease: 'power3.out',
       });
   
-      // Cupcake movement
-      // const hero1 = hero1Ref.current;
-      // const section1 = section1Ref.current;
-  
-      // gsap.to(hero1, {
-      //   scrollTrigger: {
-      //     trigger: section1,
-      //     start: 'top center',
-      //     end: 'bottom center',
-      //     scrub: true,
-      //   },
-      //   x: -550,
-      //   y: 850,
-      //   scale: 0.35,
-      //   rotation: -30,
-      //   ease: 'power1.out',
-      // });
-  
-      // // Section1 text animation
-      // gsap.from('.section1-text h1', {
-      //   scrollTrigger: {
-      //     trigger: '.section1-text',
-      //     start: 'top 80%',
-      //     toggleActions: 'play none none none',
-      //   },
-      //   y: 50,
-      //   opacity: 0,
-      //   duration: 0.8,
-      //   ease: 'power3.out',
-      // });
-  
-      // gsap.from('.section1-text p', {
-      //   scrollTrigger: {
-      //     trigger: '.section1-text',
-      //     start: 'top 75%',
-      //     toggleActions: 'play none none none',
-      //   },
-      //   y: 50,
-      //   opacity: 0,
-      //   duration: 0.8,
-      //   ease: 'power3.out',
-      // });
   
     }, heroRef);
   
@@ -96,7 +49,6 @@ const Hero = () => {
   
       if (!h1 || !p || !section1 || !section2 || !section3) return;
   
-      // Combined timeline across all three sections
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section1,
@@ -107,7 +59,6 @@ const Hero = () => {
         },
       });
   
-      // STEP 1: Inside section1 - cupcake floats and settles
       tl.to(hero1Ref.current, {
         x: -460,
         y: 730,
@@ -116,7 +67,6 @@ const Hero = () => {
         ease: 'power2.out',
       });
   
-      // STEP 2: Continue motion into section2 - cupcake launches and lands
       tl.to(hero1Ref.current, {
         x: -810,
         y: 1340,
@@ -125,20 +75,18 @@ const Hero = () => {
         ease: 'power2.inOut',
       });
   
-      // STEP 3: Continue motion into section3 - cupcake rotates and scales down
       tl.to(hero1Ref.current, {
         x: -380,
-        y: 2040, // adjust based on layout
+        y: 2040, 
         scale: 0.8,
         rotation: -0,
-        height: 500,       // px value (number only)
+        height: 500,       
   width: 460,
   zIndex: 20, 
         ease: 'power2.Out',
         
       });
   
-      // Heading animation
       gsap.from(h1, {
         scrollTrigger: {
           trigger: section1,
@@ -151,7 +99,6 @@ const Hero = () => {
         ease: 'power3.out',
       });
   
-      // Paragraph animation
       gsap.from(p, {
         scrollTrigger: {
           trigger: section1,
@@ -187,7 +134,7 @@ const Hero = () => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: section3,
-          start: 'top 70%', // 👈 when section3 top reaches 60% of viewport
+          start: 'top 70%',
           toggleActions: 'play none none none',
         },
       }
@@ -201,7 +148,7 @@ const Hero = () => {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: section3,
-          start: 'top 70%', // 👈 same trigger for consistency
+          start: 'top 70%', 
           toggleActions: 'play none none none',
         },
       }
@@ -260,16 +207,13 @@ const Hero = () => {
   </div>
 
   <div className="cupcake-cards">
-    {/* Lemon */}
     <div className="cupcake-card lemon">
       <img src="/images/lemon.png" alt="Lemon Cupcake" className="lemon-img"/>
       <h3>Lemon Delight</h3>
       <p>Lemon zest, sunshine-fresh, and perfectly tangy! </p>
     </div>
 
-    {/* Peach */}
     <div className="cupcake-card peach">
-      {/* <img src="/images/peach-cupcake.png" alt="Peach Cupcake" /> */}
       <h3>Peach Blossom</h3>
       <p>Soft peachy swirl, dreamy & sweet like summer! </p>
     </div>
